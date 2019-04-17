@@ -1,0 +1,142 @@
+/* Product */
+
+.product {
+    width: 420px;
+    margin-top: 24px;
+
+    @media screen and (max-width: 991px) {
+        width: $full;
+        margin-top: 0;
+    }
+
+    .product__title {
+        background: $dark;
+        color: white;
+        padding: 15px 30px 15px 15px;
+        @include font-size(2, 3.2);
+
+        @media screen and (max-width: 991px) {
+            @include font-size(1.8, 3);
+            padding: 15px;
+        }
+    }
+
+    .product__image {
+        text-align: center;
+        background: $dark;
+        padding-bottom: 20px;
+        display: none;
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+
+        @media screen and (max-width: 341px) {
+            padding-bottom: 0;
+        }
+
+        img {
+            width: 320px;
+            height: auto;
+            line-height: 0;
+
+            @media screen and (max-width: 321px) {
+                width: $full;
+            }
+        }
+    }
+
+    .product__list {
+        padding: 20px;
+        background: rgba(white, .9);
+
+        @media screen and (max-width: 991px) {
+            padding: 20px 30%;
+            background: #f2f2f2;
+        }
+
+        @media screen and (max-width: 725px) {
+            padding: 20px 25%;
+        }
+
+        @media screen and (max-width: 551px) {
+            padding: 20px 20%;
+        }
+
+        @media screen and (max-width: 361px) {
+            padding: 20px;
+        }
+
+        li {
+            padding: 3px 0;
+            display: flex;
+
+            i {
+                padding-right: 5px;
+                @include font-size(1.5, 2.2);
+            }
+
+            p {
+                padding: 2px 0 0 5px;
+            }
+        }
+    }
+
+    .product__price-wrapper {
+        padding: 0 15px;
+        background: rgba(white, .9);
+
+        @media screen and (max-width: 991px) {
+            background: #f2f2f2;
+        }
+
+        .product__price-container {
+            border-top: 1px solid rgba(black, .1);
+        }
+
+        .product__price {
+            padding: 30px 0;
+            width: 220px;
+            margin: $center;
+            display: flex;
+
+            span {
+                background: $green;
+                display: block;
+                width: 55px;
+                height: 55px;
+                text-align: center;
+                @include rounded-corners(50%);
+                position: relative;
+
+                i {
+                    @include font-size(3, 3);
+                    color: white;
+                    @extend .block-centering;
+                }
+            }
+
+            div {
+                padding: 0 0 0 20px;
+                text-align: left;
+
+                var,
+                strong {
+                    display: block;
+                }
+
+                var {
+                    @include font-size(3.2, 3.2);
+                    margin-left: -2px;
+                    font-weight: bold;
+                    font-style: normal;
+                }
+
+                strong {
+                    text-decoration: line-through;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

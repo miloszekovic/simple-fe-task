@@ -1,0 +1,30 @@
+/* Main Logo */
+
+.logo {
+    width: 290px;
+    background: rgba(white, .9);
+    @include transitions(all 0.2s ease-in-out);
+
+    @media screen and (max-width: 991px) {
+        width: $full;
+        background: white;
+        text-align: center;
+    }
+
+    img {
+        @extend .img;
+        padding: 10px 15px 5px;
+
+        @media screen and (max-width: 991px) {
+            width: 260px;
+        }
+    }
+
+    &:hover {
+        @extend .hov;
+    }
+
+    &:active {
+        @extend .act;
+    }
+}

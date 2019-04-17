@@ -1,0 +1,74 @@
+/* Global */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $dark;
+    color: $base-text;
+    @extend .fira-sans;
+    @include font-size(1.4, 2.2);
+}
+
+a { 
+    color: $base-link;
+    text-decoration: none;
+    @include transitions(all 0.2s ease-in-out);
+    
+    &:hover,
+    &:active { 
+        color: $base-link;
+        text-decoration: underline;
+    }
+    
+    &:active {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/* layout global */
+.container {
+    max-width: 1104px;
+    margin: $center;
+
+    @media screen and (max-width: 991px) {
+        max-width: $full;
+    }
+}
+
+main {
+    background: url(../../img/content/mood.jpg) top center no-repeat $img-bg;
+    background-size: cover;
+    height: 928px;
+    display: flex;
+
+    @media screen and (max-width: 991px) {
+        background-image: none;
+        background-color: white;
+        height: auto;
+        display: block;
+    }
+
+    section {
+        width: $full / 2;
+        position: relative;
+
+        @media screen and (max-width: 991px) {
+            width: $full;
+            display: block;
+        }
+
+        &:first-child {
+            padding: 32px 0 0 32px;
+
+            @media screen and (max-width: 991px) {
+                padding: 0;
+            }
+        }
+    }
+}

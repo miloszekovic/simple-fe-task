@@ -1,0 +1,17 @@
+/* Fira Sans font */
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('base/font-fira-sans/FiraSans-Bold.woff2') format('woff2'),
+        url('base/font-fira-sans/FiraSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('base/font-fira-sans/FiraSans-Regular.woff2') format('woff2'),
+        url('base/font-fira-sans/FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

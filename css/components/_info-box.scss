@@ -1,0 +1,51 @@
+/* Info Box */
+
+.info-box {
+    margin-left: auto;
+    width: 460px;
+    background: rgba(white, .8);
+    padding: 25px 30px;
+    position: relative;
+    display: none;
+
+    @media screen and (max-width: 991px) {
+        width: $full;
+        background: white;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    h2 {
+        border-bottom: 1px solid rgba(black, .2);
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include font-size(1.2, 2);
+    }
+
+    .close-icon {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        padding: 5px;
+        display: block;
+        @include transitions(all 0.2s ease-in-out);
+
+        &:hover {
+            @extend .hov;
+        }
+
+        &:active {
+            @extend .act;
+        }
+
+        i {
+            @include font-size(1.8, 2.2);
+            color: $base-text;
+        }
+    }
+}

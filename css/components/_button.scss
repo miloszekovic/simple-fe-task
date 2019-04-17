@@ -1,0 +1,24 @@
+/* Button */
+
+.button {
+    cursor: pointer;
+    color: white;
+    background: $base-link;
+    width: $full;
+    text-align: center;
+    @include font-size(2, 2.6);
+    padding: 20px;
+    @include transitions(font-size 0.3s ease-in-out);
+
+    @media screen and (max-width: 991px) {
+        @include font-size(1.6, 2.2);
+    }
+
+    &:hover {
+        @include font-size(2.1, 2.6);
+
+        @media screen and (max-width: 991px) {
+            @include font-size(1.7, 2.2);
+        }
+    }
+}
