@@ -2,4 +2,4 @@
 
 Simple front-end task - JobLeads
 
-Demo
+<a href="http://mze.ninja/demos/jobleads/" target="_blank">Demo</a>
